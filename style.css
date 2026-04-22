@@ -41,14 +41,11 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Theme Toggle Button */
-.theme-switch-wrapper {
-    position: absolute;
+/* Boutons de contrôle (Thème et Impression) */
+#theme-toggle, #print-btn {
+    position: fixed;
     top: 20px;
-    right: 20px;
-}
-
-#theme-toggle {
+    z-index: 1000;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     color: var(--accent-color);
@@ -62,16 +59,27 @@ body {
     justify-content: center;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
-#theme-toggle:hover {
+#theme-toggle {
+    right: 20px;
+}
+
+#print-btn {
+    left: 20px;
+}
+
+#theme-toggle:hover, #print-btn:hover {
     transform: scale(1.1);
     border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-top: 20px;
     margin-bottom: 30px;
     color: var(--accent-color);
     text-transform: uppercase;
@@ -220,4 +228,104 @@ body.dark-mode .card-front img {
 .card-back::-webkit-scrollbar-thumb {
     background: var(--accent-color);
     border-radius: 2px;
+}
+
+/* --- MODE IMPRESSION --- */
+@media print {
+    /* Cacher les éléments inutiles */
+    h1, .search-container, .theme-switch-wrapper, #print-btn {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .grid {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* Format Poker Standard (63.5mm x 88.9mm par face) */
+    .card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin: 10mm auto !important; /* Augmenté pour éviter les coupures de bord de page */
+        width: 127.4mm !important; /* +0.4mm pour compenser les bordures */
+        height: 89.3mm !important; /* +0.4mm pour compenser les bordures */
+        cursor: default !important;
+        box-shadow: none !important;
+        border: 0.2mm solid #000 !important; /* Bordure de découpe noire */
+        position: relative !important;
+        display: block !important;
+        background: white !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important; /* Empêche le contenu de masquer la bordure */
+    }
+
+    .card-inner {
+        transform: none !important;
+        transition: none !important;
+        display: flex !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: static !important;
+        box-sizing: border-box !important;
+    }
+
+    .card-front, .card-back {
+        position: relative !important;
+        width: 63.5mm !important;
+        height: 88.9mm !important;
+        backface-visibility: visible !important;
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        background: white !important;
+        color: black !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 5mm !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Le Verso s'affiche à côté du Recto */
+    .card-back {
+        border-left: 0.2mm dashed #999 !important; /* Ligne de pliage */
+    }
+
+    /* Ajustement des textes pour le format carte */
+    .card-front h2 {
+        font-size: 1.1rem !important;
+        margin: 2mm 0 !important;
+        color: #8b6d1b !important;
+    }
+
+    .card-back h3 {
+        font-size: 0.85rem !important;
+        margin: 3mm 0 1mm 0 !important;
+        color: #8b6d1b !important;
+        border-bottom: 0.1mm solid #8b6d1b !important;
+    }
+
+    .card-back ul, .card-back ol {
+        font-size: 0.65rem !important;
+        padding-left: 4mm !important;
+    }
+
+    .card-front img {
+        height: 55% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        filter: none !important;
+    }
+
+    /* Forcer les couleurs à l'impression */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }

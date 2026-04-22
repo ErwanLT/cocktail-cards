@@ -13,10 +13,18 @@ async function loadCocktails() {
         displayCocktails(allCocktails);
         setupSearch();
         setupTheme();
+        setupPrint();
 
     } catch (error) {
         console.error('Erreur lors du chargement des cocktails:', error);
     }
+}
+
+function setupPrint() {
+    const printBtn = document.getElementById('print-btn');
+    printBtn.addEventListener('click', () => {
+        window.print();
+    });
 }
 
 function setupTheme() {
