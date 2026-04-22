@@ -12,7 +12,7 @@
     },
     {
         "nom": "Margarita",
-        "image": "",
+        "image": "img/margarita.png",
         "ingredients": ["Tequila", "Triple Sec", "Jus de Citron Vert", "Sel (pour le bord)"],
         "recette": [
             "Givrer le bord d'un verre avec du sel",
@@ -23,7 +23,7 @@
     },
     {
         "nom": "Old Fashioned",
-        "image": "",
+        "image": "img/oldFashioned.png",
         "ingredients": ["Bourbon ou Rye Whiskey", "Angostura Bitters", "Sucre", "Zeste d'Orange"],
         "recette": [
             "Dissoudre le sucre avec le bitters et un trait d'eau",
@@ -34,7 +34,7 @@
     },
     {
         "nom": "Negroni",
-        "image": "",
+        "image": "img/negroni.png",
         "ingredients": ["Gin", "Campari", "Vermouth Rouge"],
         "recette": [
             "Verser les trois ingrédients directement dans un verre rempli de glace",
@@ -44,7 +44,7 @@
     },
     {
         "nom": "Piña Colada",
-        "image": "",
+        "image": "img/pinacolada.png",
         "ingredients": ["Rhum ambré", "Jus d'ananas", "Crème de coco"],
         "recette": [
             "Mettre tous les ingrédients dans un blender avec de la glace",
@@ -55,7 +55,7 @@
     },
     {
         "nom": "Espresso Martini",
-        "image": "",
+        "image": "img/espressoMartini.png",
         "ingredients": ["Vodka", "Espresso frais", "Liqueur de Café", "Sirop de Sucre"],
         "recette": [
             "Verser tous les ingrédients dans un shaker rempli de glace",
@@ -66,7 +66,7 @@
     },
     {
         "nom": "Moscow Mule",
-        "image": "",
+        "image": "img/moscowMule.png",
         "ingredients": ["Vodka", "Ginger Beer", "Citron Vert"],
         "recette": [
             "Remplir un mug en cuivre de glace pilée",
@@ -108,7 +108,7 @@
     },
     {
         "nom": "Manhattan",
-        "image": "",
+        "image": "img/manhattan.png",
         "ingredients": ["Rye Whiskey", "Vermouth Rouge", "Angostura Bitters", "Cerise au marasquin"],
         "recette": [
             "Mélanger les ingrédients dans un verre à mélange avec de la glace",
@@ -215,7 +215,7 @@
     },
     {
         "nom": "White Russian",
-        "image": "",
+        "image": "img/whiteRussian.png",
         "ingredients": ["Vodka", "Liqueur de Café", "Crème Liquide"],
         "recette": [
             "Verser la vodka et la liqueur de café sur de la glace",
