@@ -2,49 +2,266 @@
     {
         "nom": "Mojito",
         "image": "img/mojito.png",
-        "ingredients": [
-            "Rhum",
-            "Menthe",
-            "Citron vert",
-            "Sucre",
-            "Eau gazeuse"
-        ],
+        "ingredients": ["Rhum Blanc", "Menthe Fraîche", "Citron Vert", "Sucre de Canne", "Eau Gazeuse"],
         "recette": [
-            "Piler la menthe avec le sucre et le citron",
-            "Ajouter le rhum",
-            "Compléter avec l'eau gazeuse",
-            "Mélanger délicatement et servir frais"
+            "Piler la menthe avec le sucre et le citron vert dans le verre",
+            "Ajouter de la glace pilée",
+            "Verser le rhum",
+            "Compléter avec l'eau gazeuse et mélanger délicatement"
+        ]
+    },
+    {
+        "nom": "Margarita",
+        "image": "",
+        "ingredients": ["Tequila", "Triple Sec", "Jus de Citron Vert", "Sel (pour le bord)"],
+        "recette": [
+            "Givrer le bord d'un verre avec du sel",
+            "Verser les ingrédients dans un shaker avec de la glace",
+            "Shaker vigoureusement",
+            "Filtrer dans le verre"
+        ]
+    },
+    {
+        "nom": "Old Fashioned",
+        "image": "",
+        "ingredients": ["Bourbon ou Rye Whiskey", "Angostura Bitters", "Sucre", "Zeste d'Orange"],
+        "recette": [
+            "Dissoudre le sucre avec le bitters et un trait d'eau",
+            "Ajouter de gros glaçons et le whiskey",
+            "Remuer doucement à la cuillère",
+            "Exprimer un zeste d'orange au-dessus du verre"
+        ]
+    },
+    {
+        "nom": "Negroni",
+        "image": "",
+        "ingredients": ["Gin", "Campari", "Vermouth Rouge"],
+        "recette": [
+            "Verser les trois ingrédients directement dans un verre rempli de glace",
+            "Remuer délicatement",
+            "Décorer avec une tranche d'orange"
+        ]
+    },
+    {
+        "nom": "Piña Colada",
+        "image": "",
+        "ingredients": ["Rhum ambré", "Jus d'ananas", "Crème de coco"],
+        "recette": [
+            "Mettre tous les ingrédients dans un blender avec de la glace",
+            "Mixer jusqu'à obtenir une texture onctueuse",
+            "Verser dans un grand verre",
+            "Décorer d'un morceau d'ananas"
+        ]
+    },
+    {
+        "nom": "Espresso Martini",
+        "image": "",
+        "ingredients": ["Vodka", "Espresso frais", "Liqueur de Café", "Sirop de Sucre"],
+        "recette": [
+            "Verser tous les ingrédients dans un shaker rempli de glace",
+            "Shaker très vigoureusement pour créer une mousse",
+            "Filtrer dans un verre à martini bien froid",
+            "Décorer de 3 grains de café"
+        ]
+    },
+    {
+        "nom": "Moscow Mule",
+        "image": "",
+        "ingredients": ["Vodka", "Ginger Beer", "Citron Vert"],
+        "recette": [
+            "Remplir un mug en cuivre de glace pilée",
+            "Ajouter la vodka et le jus de citron vert",
+            "Compléter avec la ginger beer",
+            "Remuer et décorer d'une tranche de citron"
+        ]
+    },
+    {
+        "nom": "Whiskey Sour",
+        "image": "",
+        "ingredients": ["Whiskey", "Jus de Citron", "Sirop de Sucre", "Blanc d'œuf"],
+        "recette": [
+            "Shaker tous les ingrédients sans glace (dry shake)",
+            "Ajouter de la glace et shaker à nouveau",
+            "Filtrer dans un verre",
+            "Ajouter quelques gouttes d'Angostura sur la mousse"
+        ]
+    },
+    {
+        "nom": "Cosmopolitan",
+        "image": "",
+        "ingredients": ["Vodka Citron", "Triple Sec", "Jus de Cranberry", "Jus de Citron Vert"],
+        "recette": [
+            "Shaker tous les ingrédients avec de la glace",
+            "Filtrer dans un verre à cocktail",
+            "Décorer d'un zeste de citron"
         ]
     },
     {
         "nom": "Daïquiri",
-        "image": "daiquiri.jpg",
-        "ingredients": [
-            "Rhum",
-            "Jus de citron vert",
-            "Sucre"
-        ],
+        "image": "",
+        "ingredients": ["Rhum Blanc", "Jus de Citron Vert", "Sirop de Sucre"],
         "recette": [
             "Verser tous les ingrédients dans un shaker",
-            "Ajouter de la glace",
-            "Shaker vigoureusement",
-            "Servir bien frais"
+            "Ajouter de la glace et shaker vigoureusement",
+            "Filtrer dans un verre à pied refroidi"
         ]
     },
     {
-        "nom": "Bloody Mary",
-        "image": "bloodymary.jpg",
-        "ingredients": [
-            "Vodka",
-            "Jus de tomate",
-            "Citron",
-            "Épices"
-        ],
+        "nom": "Manhattan",
+        "image": "",
+        "ingredients": ["Rye Whiskey", "Vermouth Rouge", "Angostura Bitters", "Cerise au marasquin"],
         "recette": [
-            "Verser les ingrédients dans un verre rempli de glace",
-            "Mélanger délicatement",
-            "Ajuster l'assaisonnement",
-            "Servir frais"
+            "Mélanger les ingrédients dans un verre à mélange avec de la glace",
+            "Remuer jusqu'à ce que ce soit très froid",
+            "Filtrer dans un verre à cocktail",
+            "Décorer d'une cerise"
+        ]
+    },
+    {
+        "nom": "Gimlet",
+        "image": "",
+        "ingredients": ["Gin", "Sirop de Citron Vert (Lime Cordial)", "Citron Vert"],
+        "recette": [
+            "Mélanger le gin et le sirop dans un shaker avec de la glace",
+            "Shaker brièvement",
+            "Filtrer dans un verre à cocktail",
+            "Décorer d'une rondelle de citron vert"
+        ]
+    },
+    {
+        "nom": "Sidecar",
+        "image": "",
+        "ingredients": ["Cognac", "Triple Sec", "Jus de Citron Jaune"],
+        "recette": [
+            "Givrer le bord du verre avec du sucre (optionnel)",
+            "Shaker tous les ingrédients avec de la glace",
+            "Filtrer dans le verre"
+        ]
+    },
+    {
+        "nom": "French 75",
+        "image": "",
+        "ingredients": ["Gin", "Champagne", "Jus de Citron", "Sirop de Sucre"],
+        "recette": [
+            "Shaker le gin, le citron et le sirop avec de la glace",
+            "Filtrer dans une flûte à champagne",
+            "Compléter avec le champagne",
+            "Remuer délicatement"
+        ]
+    },
+    {
+        "nom": "Aperol Spritz",
+        "image": "",
+        "ingredients": ["Aperol", "Prosecco", "Eau Gazeuse", "Orange"],
+        "recette": [
+            "Remplir un grand verre de glaçons",
+            "Verser le prosecco, puis l'Aperol",
+            "Ajouter un trait d'eau gazeuse",
+            "Décorer d'une demi-tranche d'orange"
+        ]
+    },
+    {
+        "nom": "Mai Tai",
+        "image": "",
+        "ingredients": ["Rhum ambré", "Rhum blanc", "Orgeat", "Triple Sec", "Jus de Citron Vert"],
+        "recette": [
+            "Shaker tous les ingrédients (sauf le rhum ambré si utilisé en float)",
+            "Verser dans un verre rempli de glace pilée",
+            "Ajouter le rhum ambré sur le dessus",
+            "Décorer de menthe et d'un quartier de citron"
+        ]
+    },
+    {
+        "nom": "Dark 'n' Stormy",
+        "image": "",
+        "ingredients": ["Rhum Sombre (Goslings)", "Ginger Beer", "Citron Vert"],
+        "recette": [
+            "Remplir un verre de glace",
+            "Verser la ginger beer",
+            "Verser délicatement le rhum sur le dessus pour créer un effet de nuage",
+            "Décorer d'un quartier de citron vert"
+        ]
+    },
+    {
+        "nom": "Tom Collins",
+        "image": "",
+        "ingredients": ["Gin", "Jus de Citron Jaune", "Sirop de Sucre", "Eau Gazeuse"],
+        "recette": [
+            "Mélanger le gin, le citron et le sirop dans le verre",
+            "Ajouter des glaçons",
+            "Compléter avec l'eau gazeuse",
+            "Remuer doucement"
+        ]
+    },
+    {
+        "nom": "Aviation",
+        "image": "",
+        "ingredients": ["Gin", "Liqueur de Marasquin", "Crème de Violette", "Jus de Citron Jaune"],
+        "recette": [
+            "Shaker tous les ingrédients avec de la glace",
+            "Filtrer dans un verre à cocktail refroidi",
+            "Le cocktail doit avoir une légère teinte bleu/violet"
+        ]
+    },
+    {
+        "nom": "Dry Martini",
+        "image": "",
+        "ingredients": ["Gin", "Vermouth Sec", "Olive ou Zeste de Citron"],
+        "recette": [
+            "Remuer le gin et le vermouth dans un verre à mélange avec beaucoup de glace",
+            "Filtrer dans un verre à martini glacé",
+            "Ajouter une olive ou exprimer un zeste de citron"
+        ]
+    },
+    {
+        "nom": "White Russian",
+        "image": "",
+        "ingredients": ["Vodka", "Liqueur de Café", "Crème Liquide"],
+        "recette": [
+            "Verser la vodka et la liqueur de café sur de la glace",
+            "Verser délicatement la crème sur le dessus pour créer un effet visuel",
+            "Remuer légèrement avant de boire"
+        ]
+    },
+    {
+        "nom": "Paloma",
+        "image": "",
+        "ingredients": ["Tequila", "Soda au Pamplemousse", "Jus de Citron Vert", "Sel"],
+        "recette": [
+            "Givrer le bord du verre avec du sel",
+            "Mélanger la tequila et le citron dans le verre",
+            "Ajouter de la glace et compléter avec le soda au pamplemousse"
+        ]
+    },
+    {
+        "nom": "Sazerac",
+        "image": "",
+        "ingredients": ["Cognac ou Rye Whiskey", "Absinthe", "Sucre", "Peychaud's Bitters"],
+        "recette": [
+            "Rincer un verre avec de l'absinthe et jeter l'excédent",
+            "Mélanger les autres ingrédients dans un autre verre avec de la glace",
+            "Filtrer dans le verre rincé à l'absinthe",
+            "Exprimer un zeste de citron"
+        ]
+    },
+    {
+        "nom": "Boulevardier",
+        "image": "",
+        "ingredients": ["Bourbon", "Campari", "Vermouth Rouge"],
+        "recette": [
+            "Mélanger les trois ingrédients dans un verre à mélange avec de la glace",
+            "Remuer jusqu'à refroidissement complet",
+            "Filtrer dans un verre à cocktail ou sur un gros glaçon"
+        ]
+    },
+    {
+        "nom": "Bellini",
+        "image": "",
+        "ingredients": ["Prosecco", "Purée de Pêche Blanche"],
+        "recette": [
+            "Verser la purée de pêche au fond d'une flûte",
+            "Compléter délicatement avec le prosecco bien frais",
+            "Remuer très doucement pour ne pas faire tomber les bulles"
         ]
     }
 ]
