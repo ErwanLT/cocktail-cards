@@ -12,10 +12,31 @@ async function loadCocktails() {
 
         displayCocktails(allCocktails);
         setupSearch();
+        setupTheme();
 
     } catch (error) {
         console.error('Erreur lors du chargement des cocktails:', error);
     }
+}
+
+function setupTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle.querySelector('.icon');
+    
+    // Charger le thème sauvegardé
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        icon.textContent = '☀️';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        
+        icon.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
 }
 
 function displayCocktails(cocktails) {
