@@ -119,7 +119,7 @@
     },
     {
         "nom": "Gimlet",
-        "image": "",
+        "image": "img/gimlet.png",
         "ingredients": ["Gin", "Sirop de Citron Vert (Lime Cordial)", "Citron Vert"],
         "recette": [
             "Mélanger le gin et le sirop dans un shaker avec de la glace",
@@ -130,7 +130,7 @@
     },
     {
         "nom": "Sidecar",
-        "image": "",
+        "image": "img/sidecar.png",
         "ingredients": ["Cognac", "Triple Sec", "Jus de Citron Jaune"],
         "recette": [
             "Givrer le bord du verre avec du sucre (optionnel)",
@@ -140,7 +140,7 @@
     },
     {
         "nom": "French 75",
-        "image": "",
+        "image": "img/french75.png",
         "ingredients": ["Gin", "Champagne", "Jus de Citron", "Sirop de Sucre"],
         "recette": [
             "Shaker le gin, le citron et le sirop avec de la glace",
@@ -151,7 +151,7 @@
     },
     {
         "nom": "Aperol Spritz",
-        "image": "",
+        "image": "img/aperol.png",
         "ingredients": ["Aperol", "Prosecco", "Eau Gazeuse", "Orange"],
         "recette": [
             "Remplir un grand verre de glaçons",
@@ -162,7 +162,7 @@
     },
     {
         "nom": "Mai Tai",
-        "image": "",
+        "image": "img/maitai.png",
         "ingredients": ["Rhum ambré", "Rhum blanc", "Orgeat", "Triple Sec", "Jus de Citron Vert"],
         "recette": [
             "Shaker tous les ingrédients (sauf le rhum ambré si utilisé en float)",
