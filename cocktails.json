@@ -1,0 +1,50 @@
+[
+    {
+        "nom": "Mojito",
+        "image": "img/mojito.png",
+        "ingredients": [
+            "Rhum",
+            "Menthe",
+            "Citron vert",
+            "Sucre",
+            "Eau gazeuse"
+        ],
+        "recette": [
+            "Piler la menthe avec le sucre et le citron",
+            "Ajouter le rhum",
+            "Compléter avec l'eau gazeuse",
+            "Mélanger délicatement et servir frais"
+        ]
+    },
+    {
+        "nom": "Daïquiri",
+        "image": "daiquiri.jpg",
+        "ingredients": [
+            "Rhum",
+            "Jus de citron vert",
+            "Sucre"
+        ],
+        "recette": [
+            "Verser tous les ingrédients dans un shaker",
+            "Ajouter de la glace",
+            "Shaker vigoureusement",
+            "Servir bien frais"
+        ]
+    },
+    {
+        "nom": "Bloody Mary",
+        "image": "bloodymary.jpg",
+        "ingredients": [
+            "Vodka",
+            "Jus de tomate",
+            "Citron",
+            "Épices"
+        ],
+        "recette": [
+            "Verser les ingrédients dans un verre rempli de glace",
+            "Mélanger délicatement",
+            "Ajuster l'assaisonnement",
+            "Servir frais"
+        ]
+    }
+]

@@ -1,104 +1,92 @@
-// Données des cocktails
-const cocktails = [
-    {
-        nom: "Mojito",
-        image: "img/mojito.png",
-        ingredients: [
-            "Rhum",
-            "Menthe",
-            "Citron vert",
-            "Sucre",
-            "Eau gazeuse"
-        ],
-        recette: [
-            "Piler la menthe avec le sucre et le citron",
-            "Ajouter le rhum",
-            "Compléter avec l'eau gazeuse",
-            "Mélanger délicatement et servir frais"
-        ]
-    },
-    {
-        nom: "Daïquiri",
-        image: "daiquiri.jpg",
-        ingredients: [
-            "Rhum",
-            "Jus de citron vert",
-            "Sucre"
-        ],
-        recette: [
-            "Verser tous les ingrédients dans un shaker",
-            "Ajouter de la glace",
-            "Shaker vigoureusement",
-            "Servir bien frais"
-        ]
-    },
-    {
-        nom: "Bloody Mary",
-        image: "bloodymary.jpg",
-        ingredients: [
-            "Vodka",
-            "Jus de tomate",
-            "Citron",
-            "Épices"
-        ],
-        recette: [
-            "Verser les ingrédients dans un verre rempli de glace",
-            "Mélanger délicatement",
-            "Ajuster l'assaisonnement",
-            "Servir frais"
-        ]
+let allCocktails = [];
+
+async function loadCocktails() {
+    try {
+        const response = await fetch('cocktails.json');
+        allCocktails = await response.json();
+
+        // 🔤 Tri alphabétique initial
+        allCocktails.sort((a, b) =>
+            a.nom.localeCompare(b.nom, 'fr', { sensitivity: 'base' })
+        );
+
+        displayCocktails(allCocktails);
+        setupSearch();
+
+    } catch (error) {
+        console.error('Erreur lors du chargement des cocktails:', error);
     }
-];
+}
 
-// 🔤 Tri alphabétique
-cocktails.sort((a, b) =>
-    a.nom.localeCompare(b.nom, 'fr', { sensitivity: 'base' })
-);
+function displayCocktails(cocktails) {
+    const grid = document.querySelector('.grid');
+    const template = document.getElementById('card-template');
+    
+    // Vider la grille
+    grid.innerHTML = '';
 
-const grid = document.querySelector('.grid');
+    if (cocktails.length === 0) {
+        grid.innerHTML = '<p style="grid-column: 1/-1; font-style: italic; color: var(--text-muted);">Aucun cocktail ne correspond à votre recherche...</p>';
+        return;
+    }
 
-// 🏗️ Génération des cartes
-cocktails.forEach(cocktail => {
+    cocktails.forEach(cocktail => {
+        const clone = template.content.cloneNode(true);
+        const card = clone.querySelector('.card');
 
-    const card = document.createElement('div');
-    card.classList.add('card');
+        // Remplir le recto
+        const img = clone.querySelector('img');
+        img.src = cocktail.image;
+        img.alt = cocktail.nom;
+        // Gestion erreur image
+        img.onerror = () => img.src = 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=400&auto=format&fit=crop';
+        
+        clone.querySelector('h2').textContent = cocktail.nom;
 
-    // 🧾 Liste ingrédients
-    const ingredientsList = cocktail.ingredients
-        .map(ing => `<li>${ing}</li>`)
-        .join('');
-
-    // 📖 Liste étapes recette
-    const recetteSteps = cocktail.recette
-        .map(step => `<li>${step}</li>`)
-        .join('');
-
-    card.innerHTML = `
-        <div class="card-inner">
-            <div class="card-front">
-                <img src="${cocktail.image}" alt="${cocktail.nom}">
-                <h2>${cocktail.nom}</h2>
-            </div>
-            <div class="card-back">
-                <h3>Ingrédients</h3>
-                <ul>${ingredientsList}</ul>
-                <h3>Recette</h3>
-                <ol>${recetteSteps}</ol>
-            </div>
-        </div>
-    `;
-
-    // 🎴 Interaction : une seule carte ouverte
-    card.addEventListener('click', () => {
-
-        document.querySelectorAll('.card.flipped').forEach(c => {
-            if (c !== card) {
-                c.classList.remove('flipped');
-            }
+        // Remplir le verso : Ingrédients
+        const ingredientsList = clone.querySelector('.card-back ul');
+        cocktail.ingredients.forEach(ing => {
+            const li = document.createElement('li');
+            li.textContent = ing;
+            ingredientsList.appendChild(li);
         });
 
-        card.classList.toggle('flipped');
-    });
+        // Remplir le verso : Recette
+        const recipeList = clone.querySelector('.card-back ol');
+        cocktail.recette.forEach(step => {
+            const li = document.createElement('li');
+            li.textContent = step;
+            recipeList.appendChild(li);
+        });
 
-    grid.appendChild(card);
-});
+        // Interaction : retournement
+        card.addEventListener('click', () => {
+            document.querySelectorAll('.card.flipped').forEach(c => {
+                if (c !== card) c.classList.remove('flipped');
+            });
+            card.classList.toggle('flipped');
+        });
+
+        grid.appendChild(clone);
+    });
+}
+
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        
+        const filtered = allCocktails.filter(cocktail => {
+            const nameMatch = cocktail.nom.toLowerCase().includes(term);
+            const ingredientMatch = cocktail.ingredients.some(ing => 
+                ing.toLowerCase().includes(term)
+            );
+            return nameMatch || ingredientMatch;
+        });
+
+        displayCocktails(filtered);
+    });
+}
+
+loadCocktails();

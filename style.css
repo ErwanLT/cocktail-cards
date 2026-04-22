@@ -1,24 +1,81 @@
+:root {
+    --bg-color: #0f0f0f;
+    --card-bg: #1a1a1a;
+    --accent-color: #d4af37; /* Or cocktail */
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Georgia, serif;
-    background: #f4f1ea;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at top right, #1a1a1a, #0f0f0f);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding: 40px 20px;
     text-align: center;
 }
 
 h1 {
-    margin: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+}
+
+.search-container {
+    margin-bottom: 50px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: var(--card-bg);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#search-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+}
+
+#search-input::placeholder {
+    color: var(--text-muted);
+    font-style: italic;
 }
 
 .grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-    width: 250px;
-    height: 350px;
-    perspective: 1000px;
+    height: 420px;
+    perspective: 1500px;
     cursor: pointer;
 }
 
@@ -26,7 +83,7 @@ h1 {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
 }
 
@@ -39,43 +96,91 @@ h1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 20px;
     backface-visibility: hidden;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .card-front {
-    background: white;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
 }
 
 .card-front img {
     width: 100%;
-    height: 70%;
+    height: 75%;
     object-fit: cover;
+    filter: sepia(20%) brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.card:hover .card-front img {
+    filter: sepia(0%) brightness(1);
 }
 
 .card-front h2 {
-    margin: 10px 0;
+    font-family: 'Playfair Display', serif;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.6rem;
+    color: var(--accent-color);
 }
 
 .card-back {
-    background: #fff8e7;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
     transform: rotateY(180deg);
-    padding: 15px;
+    padding: 25px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid var(--accent-color);
 }
 
-.card-back ul {
-    padding-left: 20px;
-    margin-bottom: 10px;
+.card-back h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent-color);
+    margin: 15px 0 10px 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 5px;
+}
+
+.card-back h3:first-of-type {
+    margin-top: 0;
+}
+
+.card-back ul, .card-back ol {
+    list-style-position: inside;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-muted);
 }
 
 .card-back li {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
-.card-back ol {
-    padding-left: 20px;
-    margin-top: 5px;
+.card-back li::marker {
+    color: var(--accent-color);
+}
+
+/* Scrollbar pour le verso si la recette est longue */
+.card-back {
+    overflow-y: auto;
+}
+
+.card-back::-webkit-scrollbar {
+    width: 4px;
+}
+
+.card-back::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 2px;
 }
