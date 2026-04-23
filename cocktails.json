@@ -88,7 +88,7 @@
     },
     {
         "nom": "Cosmopolitan",
-        "image": "",
+        "image": "img/cosmopolitan.png",
         "ingredients": ["Vodka Citron", "Triple Sec", "Jus de Cranberry", "Jus de Citron Vert"],
         "recette": [
             "Shaker tous les ingrédients avec de la glace",
@@ -98,7 +98,7 @@
     },
     {
         "nom": "Daïquiri",
-        "image": "",
+        "image": "img/daiquiri.png",
         "ingredients": ["Rhum Blanc", "Jus de Citron Vert", "Sirop de Sucre"],
         "recette": [
             "Verser tous les ingrédients dans un shaker",
@@ -173,7 +173,7 @@
     },
     {
         "nom": "Dark 'n' Stormy",
-        "image": "",
+        "image": "img/darkNStormy.png",
         "ingredients": ["Rhum Sombre (Goslings)", "Ginger Beer", "Citron Vert"],
         "recette": [
             "Remplir un verre de glace",
@@ -195,7 +195,7 @@
     },
     {
         "nom": "Aviation",
-        "image": "",
+        "image": "img/aviation.png",
         "ingredients": ["Gin", "Liqueur de Marasquin", "Crème de Violette", "Jus de Citron Jaune"],
         "recette": [
             "Shaker tous les ingrédients avec de la glace",
@@ -205,7 +205,7 @@
     },
     {
         "nom": "Dry Martini",
-        "image": "",
+        "image": "img/dryMartini.png",
         "ingredients": ["Gin", "Vermouth Sec", "Olive ou Zeste de Citron"],
         "recette": [
             "Remuer le gin et le vermouth dans un verre à mélange avec beaucoup de glace",
@@ -246,7 +246,7 @@
     },
     {
         "nom": "Boulevardier",
-        "image": "",
+        "image": "img/boulevardier.png",
         "ingredients": ["Bourbon", "Campari", "Vermouth Rouge"],
         "recette": [
             "Mélanger les trois ingrédients dans un verre à mélange avec de la glace",
@@ -256,7 +256,7 @@
     },
     {
         "nom": "Bellini",
-        "image": "",
+        "image": "img/bellini.png",
         "ingredients": ["Prosecco", "Purée de Pêche Blanche"],
         "recette": [
             "Verser la purée de pêche au fond d'une flûte",
